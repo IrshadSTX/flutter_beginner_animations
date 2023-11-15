@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 
-class LoginScreenAnimation extends StatelessWidget {
+class LoginScreenAnimation extends StatefulWidget {
   const LoginScreenAnimation({super.key});
+
+  @override
+  State<LoginScreenAnimation> createState() => _LoginScreenAnimationState();
+}
+
+class _LoginScreenAnimationState extends State<LoginScreenAnimation>
+    with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation<double> opacity;
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(vsync: this);
+    opacity = Tween<double>(begin: 0, end: 1).animate(controller);
+  }
 
   @override
   Widget build(BuildContext context) {

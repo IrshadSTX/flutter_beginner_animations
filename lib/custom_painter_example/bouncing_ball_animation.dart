@@ -10,7 +10,7 @@ class BouncingBallAnimation extends StatefulWidget {
 class _BouncingBallAnimationState extends State<BouncingBallAnimation> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
